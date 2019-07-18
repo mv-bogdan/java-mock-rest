@@ -8,11 +8,13 @@ import com.example.java_mock_rest.models.LoginModel;
 import com.example.java_mock_rest.models.ProductsDataModel;
 import com.example.java_mock_rest.models.ProductsModel;
 import com.example.java_mock_rest.models.ProfileModel;
+import com.example.java_mock_rest.models.TasksModel;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
@@ -42,6 +44,9 @@ public interface NetInterface {
 
     @POST("users?page={id}")
     Observable<EmployeeModel> showEmployees(@Path("id") String pageId, @Body Employee employee);
+
+    @GET("v1/task")
+    Observable<TasksModel> getTasks(@Header("Authorization") String accessToken);
 
 }
 
