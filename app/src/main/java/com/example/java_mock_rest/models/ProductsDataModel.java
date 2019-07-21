@@ -5,27 +5,31 @@ import com.google.gson.annotations.SerializedName;
 
 public class ProductsDataModel {
 
-@SerializedName("id")
-@Expose
-private Integer id;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+
     @SerializedName("name")
     @Expose
     private String name;
+
     @SerializedName("year")
     @Expose
     private Integer year;
+
     @SerializedName("color")
     @Expose
     private String color;
+
     @SerializedName("pantone_value")
     @Expose
     private String pantoneValue;
 
-    public Integer getId() {
+    public Integer getIdProduct() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setIdProduct(Integer id) {
         this.id = id;
     }
 

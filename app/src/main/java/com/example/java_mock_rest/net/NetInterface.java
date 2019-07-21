@@ -42,8 +42,8 @@ public interface NetInterface {
     @DELETE("users/{id}")
     Observable<EmployeeModel> deleteEmployee(@Path("id") String employeeId);
 
-    @POST("users?page={id}")
-    Observable<EmployeeModel> showEmployees(@Path("id") String pageId, @Body Employee employee);
+    @GET("users?page={id}")
+    Observable<EmployeeModel> showEmployees(@Path("id") String pageId);
 
     @GET("v1/task")
     Observable<TasksModel> getTasks(@Header("Authorization") String accessToken);

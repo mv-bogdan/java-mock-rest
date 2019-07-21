@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:id="@+id/cv"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Title"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Color"
+            app:layout_constraintTop_toBottomOf="@+id/tTitle"
+            />
+
+        <TextView
+            android:id="@+id/tIdProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="IdProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tColor"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
